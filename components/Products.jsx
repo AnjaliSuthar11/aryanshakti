@@ -1,6 +1,7 @@
 "use client"
+
 import Product from './Product'
-import products from '../Product'
+import products from '../data/Product'
 
 const Products = () => {
 

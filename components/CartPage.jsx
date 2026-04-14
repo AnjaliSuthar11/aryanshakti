@@ -2,7 +2,7 @@
 
 import { useApp } from "../context/AppContext";
 
-import products from "../Product";
+import products from "../data/Product";
 
 const CartPage = () => {
   const { cart, increaseQty, decreaseQty } = useApp();

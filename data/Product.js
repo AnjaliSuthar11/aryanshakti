@@ -68,7 +68,7 @@
   {
     id: 9,
     name: "Pain relief drop",
-    category: "Energy and Performance",
+    category: "Health juices",
     description: "Supports muscle growth and recovery.",
     price:6643,
     image: "/pain-relief-all-inner-images/Pain-relief-drop-inner-image.png",
@@ -76,7 +76,7 @@
   {
     id: 10,
     name: "Pain relief juice (500ml)",
-    category: "Energy and Performance",
+    category: "Health juices",
     description: "Supports muscle growth and recovery.",
     price:6643,
     image: "/pain-relief-all-inner-images/Pain-relief-juice-(500ml)-inner-image.png",
@@ -84,7 +84,7 @@
   {
     id: 11,
     name: "Pain relief juice (1000ml)",
-    category: "Energy and Performance",
+    category: "Health juices",
     description: "Supports muscle growth and recovery.",
     price:6643,
     image: "/pain-relief-all-inner-images/Pain-relief-juice-(1000ml)-inner-image.png",
@@ -92,7 +92,7 @@
   {
     id: 12,
     name: "Pain relief tablet",
-    category: "Energy and Performance",
+    category: "Health juices",
     description: "Supports muscle growth and recovery.",
     price:6643,
     image: "/pain-relief-all-inner-images/Pain-relief-tablet-inner-image.png",

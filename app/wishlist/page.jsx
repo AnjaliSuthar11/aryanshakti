@@ -1,7 +1,7 @@
 "use client";
 
 import { useApp } from '../../context/AppContext';
-import products from '../../Product';
+import products from '../../data/Product';
 
 const Page = () => {
   const { wishlist } = useApp();
