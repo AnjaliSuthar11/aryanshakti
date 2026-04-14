@@ -61,7 +61,7 @@ const sortedProducts = [...filteredProducts].sort((a, b) => {
           <h2 className='text-sm font-medium'>CATEGORIES</h2>
 
           <div className="flex flex-col gap-2 text-sm text-gray-700">
-            {['Pain Relief','Immunity','Health'].map((category) => (
+            {['Detox','Health juices','Energy and Performance'].map((category) => (
               <label key={category} className='flex gap-2'>
                 <input
                   type='checkbox'

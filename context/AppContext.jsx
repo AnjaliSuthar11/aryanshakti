@@ -6,6 +6,11 @@ const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [cart, setCart] = useState({}); // {id: quantity}
 
+  // ❤️ NEW: Wishlist state
+  const [wishlist, setWishlist] = useState([]);
+
+  // ---------------- CART ----------------
+
   const addToCart = (id) => {
     setCart((prev) => ({
       ...prev,
@@ -36,6 +41,18 @@ export const AppProvider = ({ children }) => {
 
   const totalItems = Object.values(cart).reduce((a, b) => a + b, 0);
 
+  // ---------------- ❤️ WISHLIST ----------------
+
+  const toggleWishlist = (id) => {
+    setWishlist((prev) =>
+      prev.includes(id)
+        ? prev.filter((item) => item !== id) // remove
+        : [...prev, id] // add
+    );
+  };
+
+  // ---------------- PROVIDER ----------------
+
   return (
     <AppContext.Provider
       value={{
@@ -44,6 +61,10 @@ export const AppProvider = ({ children }) => {
         increaseQty,
         decreaseQty,
         totalItems,
+
+        // ❤️ expose wishlist
+        wishlist,
+        toggleWishlist,
       }}
     >
       {children}

@@ -5,30 +5,19 @@ import Catalouge from './Catalouge'
 
 const Catagories = () => {
     const data=[
-        {image:"/catagory1.webp",
-         title:"Vitamins and Minerals"
-        },
-        {image:"/catagory2.webp",
-         title:"Immunity and Wellness"
-        },
-        {image:"/catagory3.webp",
-         title:"Gut Health and Digestion"
-        },
-        {image:"/catagory4.webp",
+        {image:"/category-images/Energy-and-Performance.jpg",
          title:"Energy and Performance"
         },
-        {image:"/catagory5.webp",
-         title:"Mental Focus and Sleep"
+        {image:"/category-images/health-juices.jpg",
+         title:"Healthy Juices "
         },
-        {image:"/catagory6.webp",
-         title:"Supplements"
+        {image:"/category-images/Gut-Health-and-Digestion.jpg",
+         title:"Gut Health and Digestion"
         },
-        {image:"/catagory7.webp",
+          {image:"/catagory7.webp",
          title:"Pills"
         },
-        {image:"/catagory8.webp",
-         title:"Gummies"
-        },
+        
     ]
   return (
     <div className='flex gap-10 bg-[#e5f2ef] flex-wrap justify-center py-20'>

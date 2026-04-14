@@ -2,21 +2,25 @@ import React from 'react'
 
 const MiddleBanner = () => {
   return (
-    <div className='bg-[#e5f2ef]'>
+    <div className='bg-[#e5f2ef] '>
 
   
-    <div className='flex justify-center items-center gap-10  p-10 '>
-      <div className="flex justify-start items-end  bg-[url('/medicine3.webp')] w-1/2 h-[500px] bg-center bg-cover rounded-2xl py-10  px-4 ">
+    <div className='flex justify-center items-center gap-10 p-10 md:flex-row flex-col '>
+
+      <div className="flex justify-start items-end  bg-[url('/medicine3.webp')] md:w-1/2 w-full h-[500px] bg-center bg-cover rounded-2xl py-10  px-4 ">
         {/* <img src='./medicine3.webp' className='bg-cover bg-center rounded-3xl'/> */}
         <h1 className='text-4xl text-white font-bold w-[370px] leading-tight '>Stock Up on Health - Explore Deals Now!</h1>
 
       </div>
-      <div className="flex justify-start items-end  bg-[url('/medicine2.webp')] w-1/2 h-[500px] bg-center bg-cover rounded-2xl py-10 px-4">
+
+      <div className="flex justify-start items-end  bg-[url('/medicine2.webp')] md:w-1/2 w-full h-[500px] bg-center bg-cover rounded-2xl py-10 px-4">
         {/* <img src='./medicine2.webp' className='bg-center bg-cover rounded-3xl'/> */}
         <h1 className='text-4xl text-white font-bold w-[500px] leading-tight '>Your Health Booster Just Got a Price Drop!</h1>
       </div>
 
     </div>
+
+
     <div className="overflow-hidden py-6">
   <div className="flex w-max animate-marquee gap-10">
 
