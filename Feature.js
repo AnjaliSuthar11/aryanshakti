@@ -3,35 +3,36 @@ const Feature =[
  
   {
     id: 3,
-    name: "Natural detox juice (1000ml)",
-    category: "Detox",
+    name: "Men Health Combo",
+    category: "Energy and Performance",
     description: "Gentle face wash for glowing and fresh skin.",
     price: 8323,
-    image: "natural-detox-all-inner-images/natural-detox-juice-(1000ml)-inner-image.png",
+    image: "combo/men-health-combo-image.jpg",
   },
   {
     id: 4,
-    name: "Natural detox tablet",
+    name: "Natural Detox Combo",
     category: "Detox",
     description: "Nourishes scalp and strengthens hair roots.",
     price:3443,
-    image: "natural-detox-all-inner-images/natural-detox-tablet-inner-image.png",
+    image: "combo/natural-detox-combo-image.jpg",
   },
   {
     id: 5,
-    name: "Men health drop",
-    category: "Energy and Performance",
+    name: "Healthy Juices Combo",
+    category: "Health juices",
     description: "Keeps your skin soft and moisturized all day.",
     price: 3245,
-    image: "/men-health-all-inner-images/men-health-drop-inner-image.png",
+    image: "/combo/pain-relief-combo-image.jpg",
   },
   {
     id: 6,
-    name: "Men health juice (500ml)",
+    name: "Men Health Combo",
     category: "Energy and Performance",
-    description: "Instant relief from muscle pain and sprains.",
-    price: 978,
-    image: "/men-health-all-inner-images/men-health-juice-(500ml)-inner-image.png",
+    description: "Gentle face wash for glowing and fresh skin.",
+    price: 8323,
+    image: "combo/men-health-combo-image.jpg",
+  
   },
 ]
 
