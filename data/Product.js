@@ -15,7 +15,7 @@
     category: "Detox",
     description: "Boosts immunity and helps fight infections. Pack of 30 tablets.",
     price:2893,
-    image: "/natural-detox-all-inner-images/natural-detox-juice-(500ml)-inner-image.png",
+    image: "/natural-detox-all-inner-images/natural-detox-juice-(500ml)-inner-image-1.png",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@
     category: "Detox",
     description: "Gentle face wash for glowing and fresh skin.",
     price: 8323,
-    image: "natural-detox-all-inner-images/natural-detox-juice-(1000ml)-inner-image.png",
+    image: "natural-detox-all-inner-images/natural-detox-juice-(1000ml)-inner-image-1.png",
   },
   {
     id: 4,
@@ -47,7 +47,7 @@
     category: "Energy and Performance",
     description: "Instant relief from muscle pain and sprains.",
     price: 978,
-    image: "/men-health-all-inner-images/men-health-juice-(500ml)-inner-image.png",
+    image: "/men-health-all-inner-images/men-health-juice-(500ml)-inner-image-1.png",
   },
   {
     id: 7,
@@ -55,7 +55,7 @@
     category: "Energy and Performance",
     description: "Natural gel for soothing and hydrating skin.",
     price: 6754,
-    image: "/men-health-all-inner-images/men-health-juice-(1000ml)-inner-image.png",
+    image: "/men-health-all-inner-images/men-health-juice-(1000ml)-inner-image-1.png",
   },
   {
     id: 8,
@@ -79,7 +79,7 @@
     category: "Health juices",
     description: "Supports muscle growth and recovery.",
     price:6643,
-    image: "/pain-relief-all-inner-images/Pain-relief-juice-(500ml)-inner-image.png",
+    image: "/pain-relief-all-inner-images/Pain-relief-juice-(500ml)-inner-image-1.png",
   },
   {
     id: 11,

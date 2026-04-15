@@ -10,7 +10,7 @@ const DisplayReel = () => {
       {/* <InstaReel id="DVLvkmfjUUo"/>
       <InstaReel id="DU-3iSGAtdP"/> */}
       <div>
-        <h1 className='text-3xl'>  Stories</h1>
+        <h1 className='text-3xl font-semibold'> STORIES</h1>
       
         </div>
         

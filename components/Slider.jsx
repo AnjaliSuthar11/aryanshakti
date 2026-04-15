@@ -79,7 +79,7 @@ const Slider = () => {
 
           {/* Content */}
           <div className="relative z-10 flex flex-col gap-5 px-20 py-20 h-full justify-end text-white">
-            <h2 className="text-5xl md:text-6xl max-w-[800px]">
+            <h2 className="text-5xl md:text-6xl max-w-[800px] font-semibold">
               {slide.title}
             </h2>
 

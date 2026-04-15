@@ -142,7 +142,7 @@ export default function Navbar3() {
 
   {menuOpen && (
   <div
-    className="absolute right-0 mt-3 bg-white shadow-xl rounded-lg w-52 p-3 border border-gray-200 z-50"
+    className="absolute right-0 mt-3 bg-white shadow-xl rounded-lg w-52 p-3 border border-gray-200 z-50 "
     style={{
       backdropFilter: "none",
       WebkitBackdropFilter: "none",
@@ -196,7 +196,7 @@ export default function Navbar3() {
         {/* Mobile Navbar */}
       
       </nav>
-      <div className="md:hidden relative flex items-center justify-between py-3 px-4 bg-white gap-10 border-b border-gray-300">
+      <div className="md:hidden relative flex items-center justify-between py-3 px-4 bg-white gap-10 border-b border-gray-300 sticky top-0 z-50">
       
       {/* LEFT: Hamburger Drawer */}
       <button onClick={() => setMobileOpen(!mobileOpen)}>
@@ -279,7 +279,7 @@ user
           <div className="flex items-center border rounded-lg px-3 py-1">
             <Image
               className="w-4 h-4"
-              src={""}
+              src="./search_icon.svg"
               alt="search icon"
               width={16}
               height={16}
