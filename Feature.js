@@ -6,7 +6,7 @@ const Feature =[
     name: "Men Health Combo",
     category: "Energy and Performance",
     description: "Gentle face wash for glowing and fresh skin.",
-    price: 8323,
+    price: 832,
     image: "combo/men-health-combo-image.jpg",
   },
   {
@@ -14,7 +14,7 @@ const Feature =[
     name: "Natural Detox Combo",
     category: "Detox",
     description: "Nourishes scalp and strengthens hair roots.",
-    price:3443,
+    price:344,
     image: "combo/natural-detox-combo-image.jpg",
   },
   {
@@ -22,7 +22,7 @@ const Feature =[
     name: "Healthy Juices Combo",
     category: "Health juices",
     description: "Keeps your skin soft and moisturized all day.",
-    price: 3245,
+    price: 325,
     image: "/combo/pain-relief-combo-image.jpg",
   },
   {
@@ -30,7 +30,7 @@ const Feature =[
     name: "Men Health Combo",
     category: "Energy and Performance",
     description: "Gentle face wash for glowing and fresh skin.",
-    price: 8323,
+    price: 823,
     image: "combo/men-health-combo-image.jpg",
   
   },
