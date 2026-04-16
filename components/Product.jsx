@@ -11,10 +11,10 @@ const Product = ({product}) => {
 
   const quantity = cart[product.id] || 0;
   return (
-    <div className='flex flex-col w-70 rounded-2xl bg-white shadow-md  '> 
+    <div className='flex flex-col w-80 rounded-2xl bg-white shadow-md  '> 
       
       {/* Image */}
-      <div className='w-full h-60 overflow-hidden rounded-t-2xl relative'> 
+      <div className='w-full h-72 overflow-hidden rounded-t-2xl relative'> 
         <img 
           src={product.image} 
           className='w-full h-full object-cover'

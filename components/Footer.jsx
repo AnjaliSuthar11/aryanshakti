@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaPhoneAlt } from 'react-icons/fa'
+import { BsInstagram } from 'react-icons/bs'
+import { FaFacebook, FaPhoneAlt } from 'react-icons/fa'
 import { IoIosMail } from 'react-icons/io'
 
 const Footer = () => {
@@ -45,6 +46,20 @@ const Footer = () => {
         >
          <IoIosMail />
           example@gmail.com
+        </Link>
+        <Link
+          href="mailto:getyoung@juvenis.in"
+          className="flex items-center gap-1 text-inherit"
+        >
+         <FaFacebook />
+          aryanshakti
+        </Link>
+        <Link
+          href="mailto:getyoung@juvenis.in"
+          className="flex items-center gap-1 text-inherit"
+        >
+         <BsInstagram />
+          aryanshakti
         </Link>
         </div>
         

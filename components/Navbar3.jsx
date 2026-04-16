@@ -53,6 +53,8 @@ export default function Navbar3() {
     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
   </Link>
 
+<div className="relative group">
+
   <Link
     href="/products"
     className="relative group text-gray-700 hover:text-[#1893bf] transition"
@@ -60,6 +62,62 @@ export default function Navbar3() {
     Shop
     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
   </Link>
+  {/* DROPDOWN */}
+    <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[400px] bg-white shadow-xl rounded-lg p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+
+      <div className="flex flex-wrap justify-between gap-2">
+
+        {/* CATEGORY ITEM */}
+        <Link href="products" className="group w-[150px] text-center">
+          <img
+            src="/catagory7.webp"
+            alt="Men"
+            className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
+          />
+          <p className="mt-2 text-sm font-medium group-hover:text-[#1893bf]">
+          Pills
+          </p>
+        </Link>
+
+        <Link href="/products" className="group w-[150px] text-center">
+          <img
+            src="/category-images/health-juices.jpg"
+            alt="Women"
+            className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
+          />
+          <p className="mt-2 text-sm font-medium group-hover:text-[#1893bf]">
+            Healthy Juices
+          </p>
+        </Link>
+
+        <Link href="/products" className="group w-[150px] text-center">
+          <img
+            src="/category-images/Gut-Health-and-Digestion.jpg"
+            alt="Kids"
+            className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
+          />
+          <p className="mt-2 text-sm font-medium group-hover:text-[#1893bf]">
+           Detox
+          </p>
+        </Link>
+
+        <Link href="/products" className="group w-[150px] text-center">
+          <img
+            src="/category-images/Energy-and-Performance.jpg"
+            alt="Accessories"
+            className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
+          />
+          <p className="mt-2 text-sm font-medium group-hover:text-[#1893bf]">
+          Men Health
+          </p>
+        </Link>
+
+      </div>
+
+    </div>
+
+</div>
+
 
   <Link
     href="/about-us"
@@ -74,6 +132,14 @@ export default function Navbar3() {
     className="relative group text-gray-700 hover:text-[#1893bf] transition"
   >
     Contact
+    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
+  </Link>
+
+  <Link
+    href="/blog"
+    className="relative group text-gray-700 hover:text-[#1893bf] transition"
+  >
+    Blog
     <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
   </Link>
 
@@ -311,9 +377,12 @@ user
           <Link href="/contact-us" onClick={() => setMobileOpen(false)}>
             Contact
           </Link>
+          <Link href="/blog" onClick={() => setMobileOpen(false)}>
+            Blog
+          </Link>
 
           {/* Seller Dashboard */}
-          seller
+          {/* seller */}
           {/* {isSeller && (
             <button
               onClick={() => {

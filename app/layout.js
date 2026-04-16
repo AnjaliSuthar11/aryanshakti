@@ -5,7 +5,7 @@ import Navbar3 from "../components/Navbar3";
 import Footer from "../components/Footer";
 import { AppProvider } from "../context/AppContext";
 import { Toaster } from "react-hot-toast";
-
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +35,10 @@ export default function RootLayout({ children }) {
         {children}
          <Toaster position="top-right" />
         <Footer/>
+        <Script
+          src="https://cdn.jotfor.ms/agent/embedjs/019d90baca5d75b69487c9e49eb90ccbfcf7/embed.js"
+          strategy="afterInteractive"
+        />
         </AppProvider>
         </body>
     </html>

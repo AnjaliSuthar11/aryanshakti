@@ -6,7 +6,7 @@ const ServiceDisplay = () => {
 
 
 
-      <div className="w-full bg-[url('/service1.jpg')] bg-cover bg-center h-[600px] rounded-3xl flex items-end">
+      <div className="w-full bg-[url('/1187767.jpg')] bg-cover bg-center h-[600px] rounded-3xl flex items-end">
         {/* <h1 className='text-4xl text-white font-bold w-[370px] leading-tight px-4'>Our Ayurvedic Products Range</h1> */}
       </div>
 

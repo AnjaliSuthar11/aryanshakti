@@ -12,6 +12,10 @@ import MiddleBanner from '../components/MiddleBanner'
 import ServiceDisplay from '../components/ServiceDisplay'
 import InstaReel from '../components/InstaReel'
 import DisplayReel from '../components/DisplayReel'
+import Review from '../components/Review'
+import NaturalProduct from '../components/NaturalProduct'
+import BlogSection from '../components/BlogSection'
+import AwardSection from '../components/AwardSection'
 
 
 const page = () => {
@@ -25,6 +29,11 @@ const page = () => {
      <ServiceDisplay/>
 <Products/>
 <DisplayReel/>
+<NaturalProduct/>
+<Review/>
+<AwardSection/>
+<BlogSection/>
+
 
 
     </div>
