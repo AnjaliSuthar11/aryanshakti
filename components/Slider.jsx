@@ -95,12 +95,12 @@ import React, { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    image: "/Slider-01.jpg",
+    image: "/Gemini_Generated_Image_4aa06x4aa06x4aa0.png",
     title: "Effective Solution for Everyday Health",
   },
   {
     id: 2,
-    image: "/Natural-Detox-Slider-01.jpg",
+    image: "/Men-Power-Slider-02.jpg",
     title: "Quality Medicines You Can Trust",
   },
   {
