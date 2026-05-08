@@ -10,7 +10,10 @@ const Layout = ({ children }) => {
       <Navbar />
       <div className='flex w-full'>
         <Sidebar2/>
+        <main className='flex-1'>
+
         {children}
+        </main>
       </div>
     </div>
   )
