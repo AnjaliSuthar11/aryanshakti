@@ -4,7 +4,7 @@ import Sidebar2 from '../../components/seller/Sidebar2'
 
 import React from 'react'
 
-const Layout = ({ children }) => {
+const layout = ({ children }) => {
   return (
     <div>
       <Navbar />
@@ -19,4 +19,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default layout
