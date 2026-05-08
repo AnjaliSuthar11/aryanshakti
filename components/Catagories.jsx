@@ -20,11 +20,15 @@ const Catagories = () => {
         
     ]
   return (
-    <div className='flex gap-10 bg-[#e5f2ef] flex-wrap justify-center py-20'>
+    <div className=" ">
+
+  
+    <div className='relative flex gap-10 bg-[#e5f2ef] flex-wrap justify-center py-30'>
      {data.map((item,index)=>(
         <Catalouge key={index} image={item.image} title={item.title}/>
      ))}
     </div>
+      </div>
   )
 }
 

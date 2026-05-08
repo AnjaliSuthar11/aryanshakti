@@ -1,9 +1,14 @@
 "use client"
 
-import Product from './Product'
+
 import products from '../data/Product'
+import { useRouter } from 'next/navigation'
+import ProductCard from './ProductCard'
+import { useApp } from '../context/AppContext'
 
 const Products = () => {
+  const router = useRouter()
+  const {products}= useApp()
 
   return (
     <div className='flex flex-col justify-center items-center bg-gray-100 p-10'>
@@ -14,8 +19,10 @@ const Products = () => {
       </div>
 
       <div className='flex flex-wrap gap-8 px-4 py-10 justify-center items-center '>
-        {products.map((item)=>(
-          <Product key={item.id} product={item}/>
+        {products.filter((p) => p?.type !==  "combo").map((product)=>(
+          
+          <ProductCard key={product._id} product={product}/>
+      
         ))}
  
       </div>

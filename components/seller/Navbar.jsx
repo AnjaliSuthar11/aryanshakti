@@ -1,5 +1,7 @@
 "use client";
 
+import React from "react";
+import { assets } from "../../assets/juvenis-assets";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
@@ -20,8 +22,10 @@ const Navbar = () => {
       <Image
         className="cursor-pointer"
         onClick={() => router.push("/")}
-        src={assets.juvenis_logo}
+        src="/Aryan_Shakti_Logo.png"
         alt="logo"
+        width={100}
+        height={100}
       />
       <button
         onClick={handleLogout}

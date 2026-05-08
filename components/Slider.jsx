@@ -95,7 +95,7 @@ import React, { useEffect, useState } from "react";
 const slides = [
   {
     id: 1,
-    image: "/Gemini_Generated_Image_4aa06x4aa06x4aa0.png",
+    image: "/Slider-01.jpg",
     title: "Effective Solution for Everyday Health",
   },
   {

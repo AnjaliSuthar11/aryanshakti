@@ -8,14 +8,14 @@ import { Heart, HomeIcon, Menu, X, User, ShoppingCart } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FaCartShopping } from "react-icons/fa6";
 import { useApp } from "../context/AppContext";
-
+import { assets } from "../assets/juvenis-assets";
 
 
 export default function Navbar3() {
  
  const [showSearch, setShowSearch] = useState(false)
   const [query, setQuery] = useState("")
-  const router = useRouter()
+
 
   const handleSearch = (value) => {
     setQuery(value)
@@ -26,11 +26,11 @@ export default function Navbar3() {
 
   const routerNext = useRouter();
 
-  const {totalItems}=useApp()
+  const {totalItems,user,logout,router}=useApp()
   
+const isSeller = user?.isSeller;
+  const [showModal, setShowModal] = useState(false);
 
-
-  
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <nav className=" flex items-center justify-between px-6 md:px-16 lg:px-32 py-3 border-b border-gray-300 text-gray-700 sticky top-0 z-50 bg-white shadow">
@@ -47,20 +47,20 @@ export default function Navbar3() {
 <div className="flex items-center gap-6 max-md:hidden ">
   <Link
     href="/"
-    className="relative group text-gray-700 hover:text-[#1893bf] transition"
+    className="relative group text-gray-700 hover:text-[#1a9f82] transition"
   >
     Home
-    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1a9f82] transition-all duration-300 group-hover:w-full"></span>
   </Link>
 
 <div className="relative group">
 
   <Link
     href="/products"
-    className="relative group text-gray-700 hover:text-[#1893bf] transition"
+    className="relative group text-gray-700 hover:text-[#1a9f82] transition"
   >
     Shop
-    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1a9f82] transition-all duration-300 group-hover:w-full"></span>
   </Link>
   {/* DROPDOWN */}
     <div className="absolute left-1/2 -translate-x-1/2 top-full mt-4 w-[400px] bg-white shadow-xl rounded-lg p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -74,7 +74,7 @@ export default function Navbar3() {
             alt="Men"
             className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
           />
-          <p className="mt-2 text-sm font-medium group-hover:text-[#1893bf]">
+          <p className="mt-2 text-sm font-medium group-hover:text-[#1a9f82]">
           Pills
           </p>
         </Link>
@@ -85,7 +85,7 @@ export default function Navbar3() {
             alt="Women"
             className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
           />
-          <p className="mt-2 text-sm font-medium group-hover:text-[#1893bf]">
+          <p className="mt-2 text-sm font-medium group-hover:text-[#1a9f82]">
             Healthy Juices
           </p>
         </Link>
@@ -96,7 +96,7 @@ export default function Navbar3() {
             alt="Kids"
             className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
           />
-          <p className="mt-2 text-sm font-medium group-hover:text-[#1893bf]">
+          <p className="mt-2 text-sm font-medium group-hover:text-[#1a9f82]">
            Detox
           </p>
         </Link>
@@ -107,40 +107,63 @@ export default function Navbar3() {
             alt="Accessories"
             className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
           />
-          <p className="mt-2 text-sm font-medium group-hover:text-[#1893bf]">
+          <p className="mt-2 text-sm font-medium group-hover:text-[#1a9f82]">
           Men Health
           </p>
         </Link>
+   
+    {/* NEW BULK ORDER ITEM */}
+ <button
+        onClick={() => router.push("/bulk-order")}
+        className="group w-[150px] text-center"
+      >
+        <img
+          src="/1187767.jpg"
+          alt="Bulk Order"
+          className="w-full h-28 object-cover rounded-md group-hover:scale-105 transition"
+        />
+        <p className="mt-2 text-sm font-medium group-hover:text-[#1a9f82]">
+          Bulk Order
+        </p>
+      </button>
+
+   
 
       </div>
+  
 
     </div>
 
 </div>
 
+<Link href="/combo" 
+className="relative group text-gray-700 hover:text-[#1a9f82] transition">
+ Combo
+  <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1a9f82] transition-all duration-300 group-hover:w-full"></span>
+</Link>
 
   <Link
     href="/about-us"
-    className="relative group text-gray-700 hover:text-[#1893bf] transition"
+    className="relative group text-gray-700 hover:text-[#1a9f82] transition"
   >
     About Us
-    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1a9f82] transition-all duration-300 group-hover:w-full"></span>
   </Link>
 
   <Link
     href="/contact-us"
-    className="relative group text-gray-700 hover:text-[#1893bf] transition"
+    className="relative group text-gray-700 hover:text-[#1a9f82] transition"
   >
     Contact
-    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1a9f82] transition-all duration-300 group-hover:w-full"></span>
   </Link>
 
   <Link
     href="/blog"
-    className="relative group text-gray-700 hover:text-[#1893bf] transition"
+    className="relative group text-gray-700 hover:text-[#1a9f82] transition"
   >
     Blog
-    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1893bf] transition-all duration-300 group-hover:w-full"></span>
+    <span className="absolute left-0 -bottom-1 h-[2px] w-0 bg-[#1a9f82] transition-all duration-300 group-hover:w-full"></span>
   </Link>
 
   {/* {isSeller && (
@@ -158,7 +181,7 @@ export default function Navbar3() {
         {/* Search + Icons */}
         <ul className="hidden md:flex items-center gap-4">
           <div className="flex items-center border rounded-full px-3 py-1">
-            <Image className="w-4 h-4" src="./search_icon.svg" alt="search icon"
+            <Image className="w-4 h-4" src={assets.search_icon} alt="search icon"
             width={4} height={4} />
             <input
             autoFocus
@@ -175,7 +198,7 @@ export default function Navbar3() {
           </div>
 
           <button onClick={() => routerNext.push("/wishlist")}>
-            <Image className="w-4 h-4" src="./heart_icon.svg" alt="heart_icon" width={4} height={4} />
+            <Image className="w-4 h-4" src={assets.heart_icon} alt="heart_icon" width={4} height={4} />
           </button>
 
           <div className="relative">
@@ -200,8 +223,8 @@ export default function Navbar3() {
   className="flex items-center gap-2 hover:text-gray-900 transition"
 >
   <User size={20} />
-  {/* user */}
-  {/* {user ? user.name : "Account"} */}
+
+  {user ? user.name : "Account"}
 </button>
 
 
@@ -235,7 +258,7 @@ export default function Navbar3() {
 
     <hr className="my-2 border-gray-300" />
 
-    {/* {user ? (
+    {user ? (
       <button
         onClick={() => {
           logout();
@@ -252,7 +275,7 @@ export default function Navbar3() {
           >
             Login
           </button>
-    )} */}
+    )}
   </div>
 )}
 
@@ -286,7 +309,7 @@ export default function Navbar3() {
           className="flex items-center gap-2 hover:text-gray-900 transition"
         >
           <User size={20} />
-       user   {/* {user ? user.name : "Account"} */}
+       user   {user ? user.name : "Account"}
         </button>
 
         {menuOpen && (
@@ -312,7 +335,7 @@ export default function Navbar3() {
 
             <hr className="my-2 border-gray-300" />
 user
-            {/* {user ? (
+            {user ? (
               <button
                 onClick={() => {
                   logout();
@@ -332,7 +355,7 @@ user
               >
                 Login
               </button>
-            )} */}
+            )}
           </div>
         )}
       </div>
@@ -345,7 +368,7 @@ user
           <div className="flex items-center border rounded-lg px-3 py-1">
             <Image
               className="w-4 h-4"
-              src="./search_icon.svg"
+              src="/search_icon.svg"
               alt="search icon"
               width={16}
               height={16}
@@ -382,8 +405,8 @@ user
           </Link>
 
           {/* Seller Dashboard */}
-          {/* seller */}
-          {/* {isSeller && (
+          seller
+          {isSeller && (
             <button
               onClick={() => {
                 router.push("/seller");
@@ -393,7 +416,7 @@ user
             >
               Seller Dashboard
             </button>
-          )} */}
+          )}
         </div>
       )}
     </div>

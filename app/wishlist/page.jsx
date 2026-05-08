@@ -1,30 +1,23 @@
 "use client";
 
-import { useApp } from '../../context/AppContext';
-import products from '../../data/Product';
+import ProductCard from "../../components/ProductCard";
+import { useApp } from "../../context/AppContext";
+import Image from "next/image";
 
 const Page = () => {
-  const { wishlist } = useApp();
+  const { wishlist, products, toggleWishlist, addToCart } = useApp();
 
-  const wishlistItems = products.filter((p) =>
-    wishlist.includes(p.id)
-  );
+ const items = products.filter(p => wishlist.includes(p._id));
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">My Wishlist </h1>
-
-      {wishlistItems.length === 0 ? (
-        <p>Your wishlist is empty 😢</p>
+     <div className="px-6 md:px-16 lg:px-32 py-8">
+      <h1 className="text-2xl font-semibold mb-6">My Wishlist</h1>
+      {items.length === 0 ? (
+        <p className="text-gray-500">Your wishlist is empty.</p>
       ) : (
-        <div className="flex gap-6">
-          {wishlistItems.map((item) => (
-            <div key={item.id} className="border rounded-xl p-4">
-              <img src={item.image} className=" h-40 object-cover rounded" />
-              <h2 className="font-semibold mt-2">{item.name}</h2>
-              <p className="text-sm text-gray-500">{item.category}</p>
-              <p className="font-bold">${item.price}</p>
-            </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {items.map(product => (
+            <ProductCard key={product._id} product={product} />
           ))}
         </div>
       )}

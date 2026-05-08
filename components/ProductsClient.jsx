@@ -2,11 +2,12 @@
 
 import React, { useEffect, useState } from "react"
 import { useSearchParams } from "next/navigation"
-import Product from "./Product"
-import products from "../data/Product"
+import ProductCard from "./ProductCard"
+
+import { useApp } from "../context/AppContext"
 
 const ProductsClient = () => {
-
+const {products}= useApp()
   const [sortType,setSortType]=useState('relevant')
   const searchParams = useSearchParams()
   const searchQuery = searchParams.get("search") || ""
@@ -22,17 +23,22 @@ const ProductsClient = () => {
   }
 
   // 🔥 COMBINED FILTER (SEARCH + CATEGORY)
-  const filteredProducts = products.filter((item) => {
+ const filteredProducts = products.filter((item) => {
+  const matchesSearch = item.name
+    .toLowerCase()
+    .includes(searchQuery.toLowerCase())
 
-    const matchesSearch = item.name
-      .toLowerCase()
-      .includes(searchQuery.toLowerCase())
+  const matchesCategory =
+    categories.length === 0 ||
+    categories.some(
+      (cat) =>
+        cat.toLowerCase().trim() === item.category.toLowerCase().trim()
+    );
 
-    const matchesCategory =
-      categories.length === 0 || categories.includes(item.category)
+    const isNormal = item.type !== "combo"
 
-    return matchesSearch && matchesCategory
-  })
+  return matchesSearch && matchesCategory && isNormal
+})
 
 const sortedProducts = [...filteredProducts].sort((a, b) => {
   const priceA = Number(a.price)
@@ -61,7 +67,7 @@ const sortedProducts = [...filteredProducts].sort((a, b) => {
           <h2 className='text-sm font-medium'>CATEGORIES</h2>
 
           <div className="flex flex-col gap-2 text-sm text-gray-700">
-            {['Detox','Health juices','Energy and Performance'].map((category) => (
+            {['Detox','Pain Relief','Energy and Performance'].map((category) => (
               <label key={category} className='flex gap-2'>
                 <input
                   type='checkbox'
@@ -81,7 +87,7 @@ const sortedProducts = [...filteredProducts].sort((a, b) => {
              <div className="flex justify-between mb-4 gap-5 items-center">
           <div className="w-[80%]">
             <p className="text-lg md:text-2xl font-medium">All Products</p>
-            <div className="w-16 h-0.5 bg-[#009bf1] rounded-full"></div>
+            <div className="w-16 h-0.5 bg-[#1a9f82] rounded-full"></div>
           </div> 
 
           <select
@@ -95,10 +101,10 @@ const sortedProducts = [...filteredProducts].sort((a, b) => {
           </select>
         </div>
 
-        <div className="flex flex-wrap gap-10">
+        <div className="flex flex-wrap gap-8">
         {sortedProducts.length > 0 ? (
-          sortedProducts.map((item) => (
-            <Product key={item.id} product={item} />
+          sortedProducts.map((product) => (
+            <ProductCard key={product._id} product={product} />
           ))
         ) : (
           <p className="text-white">No products found</p>

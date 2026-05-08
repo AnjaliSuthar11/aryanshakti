@@ -3,7 +3,9 @@ import React from 'react'
 
 const Catalouge = ({image,title}) => {
   return (
-    <div style={{ backgroundImage: `url(${image})` }} className='relative bg-green-100 w-[300px] h-[350px] bg-cover bg-center rounded-3xl ' >
+    <div className="">
+    <div style={{ backgroundImage: `url(${image})` }} className='relative bg-green-100 w-[300px] h-[350px] bg-cover bg-center rounded-3xl' >
+      
         <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-black/80 to-transparent z-0"></div>
 
       {/* Text (above gradient) */}
@@ -11,6 +13,7 @@ const Catalouge = ({image,title}) => {
         {title}
       </h2>
 
+</div>
 </div>
   )
 }
