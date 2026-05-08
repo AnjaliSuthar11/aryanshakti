@@ -20,7 +20,7 @@ const Sidebar = () => {
                 const isActive = pathname === item.path;
 
                 return (
-                    <Link href={item.path} key={item.name} passHref>
+                    <Link href={item.path} key={item.name} >
                         <div
                             className={
                                 `flex items-center py-3 px-4 gap-3 ${isActive
@@ -29,11 +29,12 @@ const Sidebar = () => {
                                 }`
                             }
                         >
-                            <Image
+                            {/* <Image
                                 src={item.icon}
                                 alt={`${item.name.toLowerCase()}_icon`}
                                 className="w-7 h-7"
-                            />
+                            /> */}
+                            <div className="w-7 h-7 bg-red-500"></div>
                             <p className='md:block hidden text-center'>{item.name}</p>
                         </div>
                     </Link>
