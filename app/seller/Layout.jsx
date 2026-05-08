@@ -4,19 +4,19 @@ import Sidebar from '../../components/seller/Sidebar'
 
 import React from 'react'
 
-const layout = ({ children }) => {
+const Layout = ({ children }) => {
   return (
     <div>
       <Navbar />
       <div className='flex w-full'>
         <Sidebar/>
-        <main className='flex-1'>
+        {/* <main className='flex-1'> */}
 
         {children}
-        </main>
+        {/* </main> */}
       </div>
     </div>
   )
 }
 
-export default layout
+export default Layout
