@@ -59,8 +59,8 @@ const ProductList = () => {
 const fetchSellerProducts = async () => {
   try {
     const { data } = await axios.get(
-      `/api/product/seller-list?sellerId=${user._id}`
-    );
+  `/api/product/seller-list?sellerId=${sellerId}`
+);
 
     if (data.success) {
       setProducts(data.products);
