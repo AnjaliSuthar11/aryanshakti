@@ -1,6 +1,6 @@
 'use client'
 import Navbar from '../../components/seller/Navbar'
-import Sidebar2 from '../../components/seller/Sidebar2'
+import Sidebar from '../../components/seller/Sidebar'
 
 import React from 'react'
 
@@ -9,7 +9,7 @@ const layout = ({ children }) => {
     <div>
       <Navbar />
       <div className='flex w-full'>
-        <Sidebar2/>
+        <Sidebar/>
         <main className='flex-1'>
 
         {children}
