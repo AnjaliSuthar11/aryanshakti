@@ -5,8 +5,8 @@ import Image from "next/image";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
-import { Sidebar } from "lucide-react";
-import Navbar from "../../components/seller/Navbar";
+
+
 
 const AddProduct = () => {
   const [files, setFiles] = useState([]);
@@ -497,18 +497,5 @@ for (let i = 0; i < files.length; i++) {
   );
 };
 
-// const AddProduct = () => {
-//   return (
-//     <div>
 
-//       <Navbar/>
-//       <div className="flex w-full">
-//          <Sidebar/>
-//          <AddProduct/>
-         
-//       </div>
-
-//     </div>
-//   )
-// }
-export default AddProduct;
+export default AddProduct
