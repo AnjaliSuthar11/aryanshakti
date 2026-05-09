@@ -264,7 +264,8 @@ const handleNotify = async () => {
             </div>
           </div>
         </div>
-        {/* banner */}
+
+        {/* BANNER */}
         {productData.banners?.length >0 && (
 
         <div className="sm:w-full md:w-[1024px] lg:w-[1300px] xl:w-full gap-2 flex flex-col">

@@ -4,7 +4,7 @@ import FAQ from "./FAQ";
 
 const ProductExtraDetails = ({ product }) => {
   return (
-    <div className="space-y-16 pt-20 justify-center  flex flex-col">
+    <div className="space-y-16  pt-5 md:pt-10  justify-center  flex flex-col">
 
       {/* ================= BENEFITS ================= */}
       {product?.benefits?.length > 0 && (
@@ -12,7 +12,7 @@ const ProductExtraDetails = ({ product }) => {
         <section>
           <h2 className="text-3xl font-semibold text-center">Top Benefits</h2>
 
-          <div className="flex  py-10 gap-6 justify-center items-center">
+          <div className="flex flex-col md:flex-row  py-10 gap-6 justify-center items-center">
             {product.benefits.map((item, i) => (
               <div key={i} className="text-center">
                 <img
@@ -52,7 +52,7 @@ const ProductExtraDetails = ({ product }) => {
         <section>
           <h2 className="text-3xl font-semibold text-center">What's Insides ?</h2>
 
-          <div className="flex  gap-6 justify-center items-center">
+          <div className="flex flex-col md:flex-row  gap-6 justify-center items-center">
             {product.ingredients.map((item, i) => (
               <div key={i} className="text-center">
                 <img

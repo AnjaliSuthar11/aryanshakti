@@ -100,7 +100,7 @@ const slides = [
   },
   {
     id: 2,
-    image: "/Men-Power-Slider-02.jpg",
+    image: "/Slider-01.jpg",
     title: "Quality Medicines You Can Trust",
   },
   {
@@ -139,29 +139,13 @@ const Slider = () => {
           backgroundImage: `url(${slide.image})`,
         }}
       />
-
-      {/* Overlay for readability */}
-      {/* <div className="absolute inset-0 bg-black/40 sm:bg-black/30"></div> */}
-
       {/* Content */}
       <div className="relative z-20 flex flex-col gap-4 sm:gap-5 
         px-5 sm:px-10 md:px-20 
         py-10 sm:py-16 md:py-20 
         h-full justify-end text-white"
       >
-        {/* <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl max-w-[90%] sm:max-w-[700px] font-semibold leading-tight">
-          {slide.title}
-        </h2> */}
-
-        {/* <div className="flex flex-wrap gap-3 sm:gap-5">
-          <button className="bg-[#088498] px-4 sm:px-6 py-2 rounded-xl sm:rounded-2xl font-semibold text-sm sm:text-base">
-            Shop Now
-          </button>
-
-          <button className="px-6 sm:px-10 py-2 rounded-xl sm:rounded-2xl font-semibold border border-white text-sm sm:text-base">
-            Explore
-          </button>
-        </div> */}
+        
       </div>
     </div>
   ))}
