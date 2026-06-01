@@ -77,7 +77,7 @@ const Slide = () => {
     },
     {
       id: 3,
-      image: "/Men-Power-Slider-02.jpg",
+      image: "/Men-Power-Slider-02-1.jpg",
     },
   ];
 

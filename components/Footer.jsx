@@ -6,7 +6,7 @@ import { IoIosMail } from 'react-icons/io'
 
 const Footer = () => {
   return (
-    <div className=' flex flex-col gap-10 md:flex-row justify-between py-20 px-10 bg-gray-800 text-white'>
+    <div className=' flex flex-col gap-10 md:flex-row justify-between py-20 px-10 bg-[#154313] text-white'>
 
       <div className='flex flex-col gap-2'>
         <h1 className='text-lg'>AryanShakti</h1>
@@ -35,17 +35,17 @@ const Footer = () => {
         <h1 className='text-lg'>Contact</h1>
         <div className='flex flex-col gap-1'>
             
-        <Link href="tel:+919769966696" className="flex items-center gap-1 text-inherit "
+        <Link href="tel:+91 83799 77555" className="flex items-center gap-1 text-inherit "
         >
-            <FaPhoneAlt /> 112233445
+            <FaPhoneAlt /> +91 83799 77555
         </Link>
 
         <Link
-          href="mailto:getyoung@juvenis.in"
+          href="mailto:info@AryanShakti.com"
           className="flex items-center gap-1 text-inherit"
         >
          <IoIosMail />
-          example@gmail.com
+          info@AryanShakti.com
         </Link>
         <Link
           href="mailto:getyoung@juvenis.in"

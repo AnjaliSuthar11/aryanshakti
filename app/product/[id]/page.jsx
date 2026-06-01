@@ -317,6 +317,7 @@ const handleNotify = async () => {
         onChange={(e) => setEmail(e.target.value)}
         className="w-full border p-2 mb-4 rounded"
       />
+      
 
       <div className="flex justify-between">
         <button
